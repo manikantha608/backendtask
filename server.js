@@ -6,6 +6,10 @@ const db = require("./database")
 
 require("dotenv").config()
 
+app.get("/",(req,res)=>{
+     res.send("hello wolrd")
+})
+
 app.get("/assignments",authenicateToken,(req,res)=>{
      db.getMobiles().then((result)=>{
       res.send(result)            
